@@ -1,4 +1,4 @@
-# Analyser av artikler fra ACL ANthology
+# Analyser av artikler fra ACL Anthology
 [English README here](README_eng.md)
 På ACL anthology er det over hundre tusen artikler relatert til språkteknologi. I dette repoet har vi kode for å:
 
