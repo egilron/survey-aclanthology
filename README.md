@@ -13,6 +13,4 @@ I vårt tilfelle ønsker vi å analysere trender innen modellering for sentiment
 
 Husk at hvis vi ikke kvalitetssikrer resultatene, er de kun _estimater_ av hva som artiklene inneholder.
 
-De om lag tusen artiklene vi analyserte [er tigjengelige her](https://github.com/egilron/survey-aclanthology/releases/download/v1.0/analyzed_papers.jsonl).
-
-Eksempel på OCR-kvaliteten finner du i [attention-artikkelen her](attention.md).
+Markdown og klassifiseringsresultater for de 37 artiklene som ble klassifisert til å inneholde modellering som bruker fine-tuning av dekoder-modeller [er tilgjengelig her](FinetuningDecoder_papers.jsonl).

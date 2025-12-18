@@ -14,6 +14,4 @@ In our case, we want to analyze trends in modeling for sentiment analysis. In st
 
 Remember that if we do not quality-assure the results, they are only _estimates_ of what the papers contain.
 
-The around thousand papers we analyzed are [available here](https://github.com/egilron/survey-aclanthology/releases/download/v1.0/analyzed_papers.jsonl).
-
-Example of the OCR format and quality is found in [the attention paper here](attention.md).
+Markdown and classification results for the 37 papers found to contain modeling experiments though fine-tuning decoder models are [available here](FinetuningDecoder_papers.jsonl).
