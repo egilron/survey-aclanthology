@@ -7,7 +7,7 @@ På ACL anthology er det over hundre tusen artikler relatert til språkteknologi
 1. [Bruke `google/gemini-2.5-flash`](acl_analysis-api.ipynb) for å lese innholdet og kategoriesere tekstene i henhold til promptet.
 1. [Sammenstille og presentere funnene](acl_analysis-plot.ipynb)
 
-I vårt tilfelle ønsker vi å analysere trender innen modellering for sentimentanalyse. I steg 1) setter vi årene vi er interessert i, og teksten "sentiment" som skal finnes i abstract til artiklene vi vil se nærmere på. I steg 2) setter vi sammen sidene vi får tilbake, og klipper av ved `# References`. I steg 3) instruerer vi klassifiseringen med promptet vi har valgt. I steg 4) sammenstiller vi resultatet og gjør en ekstra undersøkelse på de mest interessant tilfellene.
+I vårt tilfelle ønsker vi å analysere trender innen modellering for sentimentanalyse. I steg 1) setter vi årene vi er interessert i, og teksten "sentiment" som skal finnes i abstract til artiklene vi vil se nærmere på. I steg 2) setter vi sammen sidene vi får tilbake, og klipper av ved `# References`. I steg 3) instruerer vi klassifiseringen med [promptet vi har valgt](analysis_prompt.txt). I steg 4) sammenstiller vi resultatet og gjør en ekstra undersøkelse på de mest interessant tilfellene.
 
 ![](modeling_trends.jpg)
 
