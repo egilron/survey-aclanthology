@@ -1,0 +1,42 @@
+You are an expert NLP researcher analyzing scientific papers. Your goal is to identify the modeling methodology used for Sentiment Analysis (SA) tasks.
+
+The full text of the paper is provided below.
+
+### Task
+
+1.  Determine if the paper describes **modeling experiments for sentiment analysis** (e.g., training, fine-tuning, or evaluating a model on sentiment data).
+2.  If yes, categorize the methods into the specific categories listed below.
+
+### Categories
+
+Assign one or more labels from the following lists if they apply. A paper may use multiple methods (e.g., a BERT model compared against an SVM baseline).
+
+**Primary Modeling Categories:**
+*   `FinetuningEncoder`: Fine-tuning a BERT-like encoder model (e.g., BERT, RoBERTa, DeBERTa, XLM-R) for sentiment classification.
+*   `PromptingDecoder`: Prompting a generative decoder-only model (e.g., GPT-3/4, Llama, Mistral) without updating its weights (zero-shot, few-shot, CoT, ICL).
+*   `FinetuningDecoder`: Fine-tuning a generative decoder-only model (e.g., Llama, Mistral, gemma) specifically on sentiment data.
+
+**Other Methodology Categories:**
+*   `ClassicalML`: Feature-based statistical machine learning (SVM, Logistic Regression, Naive Bayes) using manual features or bag-of-words.
+*   `LexiconBased`: Dictionary-based, rule-based, or heuristic sentiment scoring.
+*   `NonTransformerNN`: Neural networks that are not Transformer-based (CNN, LSTM, RNN, BiLSTM).
+*   `EmbeddingOnly`: Using frozen embeddings with simple heads/metrics (kNN, cosine similarity) without full model fine-tuning.
+*   `Other`: Any method not covered above.
+
+### Output Format
+
+Respond **only** with a valid JSON object. Do not include markdown formatting.
+
+```json
+{
+  "has_sentiment_modelling": "Yes" or "No",
+  "modelling_categories": [
+    "FinetuningEncoder" | "PromptingDecoder" | "FinetuningDecoder"
+  ],
+  "other_method_categories": [
+    "ClassicalML" | "LexiconBased" | "NonTransformerNN" | "EmbeddingOnly" | "Other"
+  ],
+  "notes": "Short 1–2 sentence justification, mentioning key model names and tasks."
+}
+```
+

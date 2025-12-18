@@ -1,0 +1,36 @@
+You are an expert NLP researcher analyzing scientific papers. Your goal is to identify the modeling methodology used for Sentiment Analysis (SA) tasks.
+
+The full text of the paper is provided below.
+
+### Task
+
+1.  Determine if the paper describes **Fine-tuning a generative decoder-only model (e.g., Llama, Mistral, gemma) for sentiment analysis** (e.g., Supervised Fine-Tuning SFT, Reinforcement Learning RL, Reward Modeling, Other method, or No such fine-tuning). We are only interested in new experiments that the paper presents, not references to previous experiments
+    If the paper refers to Reward Modeling, is this as an intermediate step for RL, or is the final classification performed with Reward Modeling?
+
+### Categories
+
+Assign one or more labels from the following lists if they apply. A paper may use multiple methods.
+
+**Modeling Categories:**
+
+*   `SFT`: Supervised Fine-Tuning.
+*   `RL`: Reinforcement Learning, including DPO, PPO and other RL-like methods.
+*   `RewardModeling_intermediate`: Reward Modeling, used for RL training.
+*   `RewardModeling_final`: Reward Modeling is used for generating the final classifications.
+*   `Other`: Any method not covered above.
+*   `None`: No experiments fine-tuning a decoder-only model is reported.
+
+### Output Format
+
+Respond **only** with a valid JSON object. Do not include markdown formatting.
+
+```json
+{
+  "modelling_categories": [
+     "SFT" | "RL" | "RewardModeling_intermediate" | "RewardModeling_final" | "Other" | "None"
+  ],
+
+  "notes": "Short 1–3 sentence justification, mentioning key model names and tasks."
+}
+```
+
